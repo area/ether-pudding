@@ -311,4 +311,9 @@ Pudding.synchronizeFunction = function(fn) {
 Pudding.class_defaults = {};
 Pudding.version = pkg.version;
 
+//Allow use in meteor
+if (typeof window !== 'undefined' && typeof window.Pudding === 'undefined') {
+    window.Pudding = Pudding;
+}
+
 module.exports = Pudding;
